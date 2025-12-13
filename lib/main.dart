@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, // disable debug banner
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -39,7 +40,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -97,10 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          'Hello',
-          style: TextStyle(color: Colors.amber),
+          'Hello $_counter',
+          style: const TextStyle(color: Colors.amber),
         ),
       ),
       floatingActionButton: FloatingActionButton(
