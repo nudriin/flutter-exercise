@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -102,9 +104,21 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          'Hello $_counter',
-          style: const TextStyle(color: Colors.amber),
+        child: Container(
+          // color: Colors.blueGrey, // menambah background color pada container
+          height: 100,
+          width: 100,
+          padding:
+              const EdgeInsets.all(20.0), // menambah padding pada container
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.blueAccent),
+          child: Center(
+            child: Text(
+              'Hello $_counter',
+              style: const TextStyle(color: Colors.amber),
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
