@@ -4,6 +4,17 @@ void main() {
   runApp(const MyApp());
 }
 
+String name = "John Doe";
+int age = 20;
+double height = 5.9;
+bool isStudent = true;
+List<String> hobbies = ["Reading", "Traveling", "Coding"];
+Map<String, dynamic> address = {
+  "street": "123 Main St",
+  "city": "Springfield",
+  "zip": "12345"
+};
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
