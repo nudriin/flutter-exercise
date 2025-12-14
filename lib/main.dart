@@ -1,6 +1,8 @@
 import 'dart:ffi';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
@@ -106,27 +108,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           color: Colors.red,
-          height: double.infinity,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max, // center the column vertically
+            mainAxisSize: MainAxisSize.min, // center the column vertically
             children: [
               Container(
                 height: 100,
                 width: 100,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.blueAccent),
-                child: Center(child: Text("Number: $_counter")),
+                child: Image.asset("assets/images/cat.jpg", fit: BoxFit.cover),
               ),
               Container(
                 height: 100,
                 width: 100,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.blueAccent),
-                child: Center(child: Text("Number: $_counter")),
+                child: Image.network(
+                  "https://himatro.ee.unila.ac.id/wp-content/uploads/2024/07/flutter.png",
+                  fit: BoxFit.cover,
+                ),
               ),
             ],
           ),
