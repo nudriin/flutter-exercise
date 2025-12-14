@@ -106,17 +106,23 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           // color: Colors.blueGrey, // menambah background color pada container
-          height: 100,
-          width: 100,
+          height: double.infinity,
+          width: double.infinity,
+          margin: const EdgeInsets.all(30.0), // menambah margin pada container
           padding:
               const EdgeInsets.all(20.0), // menambah padding pada container
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.blueAccent),
-          child: Center(
-            child: Text(
-              'Hello $_counter',
-              style: const TextStyle(color: Colors.amber),
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20), color: Colors.black87),
+            padding: const EdgeInsets.all(30.0),
+            child: Center(
+              child: Text(
+                'Hello $_counter',
+                style: const TextStyle(color: Colors.amber),
+              ),
             ),
           ),
         ),
