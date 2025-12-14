@@ -105,25 +105,31 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
-          // color: Colors.blueGrey, // menambah background color pada container
-          height: double.infinity,
+          color: Colors.red,
           width: double.infinity,
-          margin: const EdgeInsets.all(30.0), // menambah margin pada container
-          padding:
-              const EdgeInsets.all(20.0), // menambah padding pada container
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.blueAccent),
-          child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20), color: Colors.black87),
-            padding: const EdgeInsets.all(30.0),
-            child: Center(
-              child: Text(
-                'Hello $_counter',
-                style: const TextStyle(color: Colors.amber),
+          child: Column(
+            mainAxisAlignment:
+                MainAxisAlignment.center, // center the column vertically
+            crossAxisAlignment:
+                CrossAxisAlignment.end, // align the column to the right
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blueAccent),
               ),
-            ),
+              Container(
+                height: 100,
+                width: 100,
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blueAccent),
+              ),
+            ],
           ),
         ),
       ),
