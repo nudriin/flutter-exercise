@@ -105,28 +105,20 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          color: Colors.red,
-          child: Row(
-            mainAxisSize: MainAxisSize.min, // center the column vertically
-            children: [
-              Container(
-                height: 100,
-                width: 100,
-                child: Image.asset("assets/images/cat.jpg", fit: BoxFit.cover),
+      body: Stack(
+        children: [
+          Image.asset('assets/images/cat.jpg',
+              width: double.infinity, height: 300, fit: BoxFit.cover),
+          SizedBox(
+            height: 300,
+            child: Container(
+              color: Colors.blue.withOpacity(0.5),
+              child: const Center(
+                child: Text("This is a cat image"),
               ),
-              Container(
-                height: 100,
-                width: 100,
-                child: Image.network(
-                  "https://himatro.ee.unila.ac.id/wp-content/uploads/2024/07/flutter.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
