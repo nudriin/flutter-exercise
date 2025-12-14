@@ -106,28 +106,27 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Container(
           color: Colors.red,
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment:
-                MainAxisAlignment.center, // center the column vertically
-            crossAxisAlignment:
-                CrossAxisAlignment.end, // align the column to the right
+          height: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max, // center the column vertically
             children: [
               Container(
                 height: 100,
                 width: 100,
-                margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blueAccent),
+                child: Center(child: Text("Number: $_counter")),
               ),
               Container(
                 height: 100,
                 width: 100,
-                margin: const EdgeInsets.only(bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.blueAccent),
+                child: Center(child: Text("Number: $_counter")),
               ),
             ],
           ),
