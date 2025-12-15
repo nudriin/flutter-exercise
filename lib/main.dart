@@ -24,17 +24,29 @@ class MyApp extends StatelessWidget {
       ),
 
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Nudriin App",
+          appBar: AppBar(
+            title: const Text(
+              "Nudriin App",
+            ),
+            centerTitle: false,
+            foregroundColor: Colors.black,
           ),
-          centerTitle: false,
-          leading: Icon(Icons.menu),
-          actions: [Text("test")],
-          backgroundColor: Colors.lime,
-          foregroundColor: Colors.black,
-        ),
-      ), // the home screen of the app
+          bottomNavigationBar: NavigationBar(
+            destinations: const [
+              NavigationDestination(
+                icon: Icon(Icons.home),
+                label: "Home",
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.person),
+                label: "Profile",
+              ),
+            ],
+            onDestinationSelected: (int value) {
+              print(value);
+            },
+            selectedIndex: 1, // tab mana yang di pilih
+          )), // the home screen of the app
     );
   }
 }
