@@ -111,16 +111,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: [
-          Image.asset('assets/images/cat.jpg',
-              width: double.infinity, height: 300, fit: BoxFit.cover),
-          SizedBox(
-            height: 300,
-            child: Container(
-              color: Colors.blue.withOpacity(0.5),
-              child: const Center(
-                child: Text("This is a cat image"),
-              ),
-            ),
+          ListTile(
+            leading: const Icon(Icons.access_alarm),
+            tileColor: Colors.deepOrange,
+            title: const Text("test"),
+            trailing: const Text("trailing"),
+            onTap: () => print("Tapped"),
           ),
         ],
       ),
