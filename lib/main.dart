@@ -109,15 +109,9 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.amber,
         ),
       ),
-      body: Stack(
+      body: Wrap(
         children: [
-          ListTile(
-            leading: const Icon(Icons.access_alarm),
-            tileColor: Colors.deepOrange,
-            title: const Text("test"),
-            trailing: const Text("trailing"),
-            onTap: () => print("Tapped"),
-          ),
+          Text("Wrapping, " * 50),
         ],
       ),
       floatingActionButton: FloatingActionButton(
